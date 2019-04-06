@@ -22,7 +22,23 @@ reg.fit(X,y)
 # Do predictions
 reg.predict([[2540],[3500],[4000]])
 ```
-
+### Support Vector Machine
+Parameters:
+* C: Sum of Error Margins
+* kernel:
+ * linear: line of separation
+ * rbf: circle of separation
+    * Additional param gamma: Inverse of the radius
+ * poly: curved line of separation
+    * Additional param degree: Degree of the polynome
+```python
+# Load the library
+from sklearn.svm import SVC
+# Create an instance of the classifier
+clf = SVC(kernel="linear",C=10)
+# Fit the data
+clf.fit(X,y)
+```
 ### K Nearest Neighbors
 parameters: n_neighbors
 ```python
